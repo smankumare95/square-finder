@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Square Finder</title>
+  </head>
+
+  <body>
+    <center>
+      <h1>Square Finder</h1>
+
+      <form onsubmit="show()">
+        <input type="number" step="any" id="num" placeholder="Enter a Number" />
+
+        <input type="submit" value="Find Square" />
+      </form>
+
+      <p id="msg"></p>
+
+      <script>
+        function show() {
+            event.preventDefault();
+          let num = document.getElementById("num");
+          let msg = document.getElementById("msg");
+
+          if (num.value === "") {
+            alert("Please enter a Number");
+            msg.innerHTML = "";
+            num.focus();
+            return;
+          }
+
+          let n = parseFloat(num.value);
+          let result = n * n;
+          msg.innerHTML = "The square of " + n + " is " + result.toFixed(2);
+        }
+      </script>
+    </center>
+  </body>
+</html>
