@@ -1,15 +1,21 @@
 <html>
   <head>
     <title>Square Finder</title>
+    <style>
+      * {
+        font-family: Cambria;
+        font-size: 40px;
+      }
+    </style>
   </head>
 
-  <body>
+  <body style="background-color: azure">
     <center>
       <h1>Square Finder</h1>
 
       <form onsubmit="show()">
         <input type="number" step="any" id="num" placeholder="Enter a Number" />
-
+        <br /><br />
         <input type="submit" value="Find Square" />
       </form>
 
@@ -17,7 +23,7 @@
 
       <script>
         function show() {
-            event.preventDefault();
+          event.preventDefault();
           let num = document.getElementById("num");
           let msg = document.getElementById("msg");
 
